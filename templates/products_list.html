@@ -9,9 +9,9 @@
     {% for product_chunks in products|chunks:4 %}
     <div class="row">
         {% for product in product_chunks %}
-        <div class="col-4">
+        <div class="col-4" style="width: 300px; height: 300px;">
             
-            <a href="{% url 'detail_product' product.pk %}"><img src="{{ product.image.url }}"></a>
+            <a href="{% url 'detail_product' product.pk %}"><img src="{{ product.image.url }}" style="height: 250px; width: 250px; padding: 5px;"></a>
             <h4>{{ product.title }}</h4>
             <p>{{ product.price }}</p>
         </div>

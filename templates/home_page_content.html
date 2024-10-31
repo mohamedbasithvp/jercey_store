@@ -20,7 +20,7 @@
         {% for product in latest_products %}
         <div class="col-4">
             
-            <a href="{% url 'detail_product' product.pk %}"><img src="{{ product.image.url }}"></a>
+            <a href="{% url 'detail_product' product.pk %}"><img src="{{ product.image.url }}" style="height: 250px; width: 250px; padding: 5px;"></a>
             <h4>{{ product.title }}</h4>
             <p>{{ product.price }}</p>
         </div>
