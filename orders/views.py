@@ -11,7 +11,7 @@ from django.contrib.auth.decorators import login_required
 def show_cart(request):
     user=request.user
     customer=user.customer_profile
-    cart_obj,created=Order.objects.get_or_create(
+    cart_obj, created=Order.objects.get_or_create(
         owner=customer,
         order_status=Order.CART_STAGE
     )
