@@ -10,6 +10,7 @@
             <p>{{ product.title }}</p>
             <h1>{{ product.title }}</h1>
             <h4>{{ product.price }}<h4>
+            <h5>Size: {{ product.size }}</h5>
 
             <form method="post" action="{% url 'add_to_cart' %}" enctype="multipart/form-data">
                 {% csrf_token %}
